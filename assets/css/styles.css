@@ -487,7 +487,7 @@ a {
 /* Gallery container styles */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     grid-row-gap: 1.5rem;
     justify-content: space-between;
     align-items: center;
@@ -519,4 +519,21 @@ a {
 
 .image-wrapper.hovered img:not(:hover) {
     opacity: 0.4;
+}
+
+/* Gallery container responsive */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    }
+
+    .image-wrapper img {
+      width: auto;
+      height: 2.5rem;
+      object-fit: cover; /* Ensures images cover the wrapper without distortion */
+      filter: grayscale(100%);
+      opacity: 0.9;
+      transition: filter 0.3s, opacity 0.3s;
+  }
 }
