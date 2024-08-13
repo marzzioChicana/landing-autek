@@ -54,7 +54,7 @@
 @media screen and (min-width: 1024px) {
   :root {
     --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
+    --h1-font-size: 2.75rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -91,17 +91,25 @@ a {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
+  max-width: 1250px;
   margin-inline: 1.5rem;
 }
 
 .section{
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 3rem;
+}
+
+.section-separator {
+  width: 90%;
+  height: 2px;
+  margin: 40px auto;
+  background: linear-gradient(to right, #f0f0f0, #888, #f0f0f0);
+  border-radius: 5px;
 }
 
 .section__title{
   font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-0-5);
+  margin-bottom: var(--mb-2-5);
 }
 
 .section__subtitle{
@@ -440,13 +448,13 @@ a {
 
 
 .nosotros__container{
-  row-gap: 1.5rem;
-  column-gap: 2rem;
+  row-gap: 2.5rem;
+  column-gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 }
 
 .nosotros__title{
@@ -466,19 +474,23 @@ a {
   text-align: center;
   margin-bottom: 20px;
   padding: 35px 12px;
-  transition: all 400ms;
+  transition: all 400ms ease-in-out;
+  background: linear-gradient(145deg, #f3f3f3, #ffffff);
+  border-radius: 5px;
+  box-shadow: 6px 6px 12px #cccccc, -6px -6px 12px #ffffff;
 }
 
-.single-feature h4 {
-  padding-top: 30px;
+.single-feature h3 {
+  padding-top: 15px;
 }
 
 .single-feature p {
-  padding: 6px 27px;
+  padding: 10px 20px;
 }
 
 .single-feature:hover {
-  box-shadow: 13px 5px 44px #ddd;
+  box-shadow: 13px 13px 44px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
 }
 
 
@@ -536,4 +548,84 @@ a {
       opacity: 0.9;
       transition: filter 0.3s, opacity 0.3s;
   }
+}
+
+/* MAQUINARIA */
+/*
+.maquinaria__container{
+  overflow: hidden;
+}
+
+.maquinaria__content{
+  padding: 0 1.5rem;
+}
+
+.maquinaria__img{
+  width: 265px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+*/
+
+.maquinaria__container {
+  padding: 2rem 0;
+}
+
+.maquinaria__content {
+  padding: 0 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide__contente{
+  overflow: hidden;
+}
+
+.maquinaria__img {
+  width: 265px;
+  border-radius: .5rem;
+  justify-self: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.maquinaria__img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-maquinaria-icon{
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  content: '';
+}
+
+.swiper-button-prev{
+  left: 1rem;
+}
+
+.swiper-button-next{
+  right: 1rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #ff6b6b;
+}
+
+.swiper-pagination-bullet {
+  background-color: #333;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff6b6b;
+  opacity: 1;
 }

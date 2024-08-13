@@ -157,3 +157,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// MAQUINARIA
+let swiperPortfolio = new Swiper(".slide__content", {
+  loop: true,
+  grabCursor: true,
+  slidesPerGroup: 2,
+  spaceBetween: 35,
+  centerSlide: 'true',
+  fade: 'true',
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    850: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  }
+});

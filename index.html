@@ -7,6 +7,9 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
+      <!--========================= SWIPER CSS =========================-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -32,9 +35,9 @@
                <ul class="nav__list">
                   <li><a href="#" class="nav__link">Inicio</a></li>
 
-                  <li><a href="#" class="nav__link">Servicios</a></li>
-                  
                   <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+
+                  <li><a href="#maquinaria" class="nav__link">Maquinaria</a></li>
 
                   <li><a href="#" class="nav__link">Contacto</a></li>
 
@@ -129,27 +132,27 @@
             </div>
          </div>
 
-         <div style="margin-top: 100px;"></div>
+         <div style="margin-top: 50px;"></div>
 
          <section class="nosotros section" id="nosotros">
             <h2 class="section__title">Nosotros</h2>
 
             <div class="nosotros__container container grid">
-               <div class="single-feature wow fadeInUp" data-wow-delay="0.3s">
+               <div class="single-feature" data-wow-delay="0.3s">
                   <h3 class="nosotros__title">¿Quiénes Somos?</h3>
                   <p class="nosotros__content">
                      Autek Ingeniería y Servicios S.A.C. ofrece un servicio integral en diseño, fabricación, instalación, mantenimiento y reparación de maquinaria, equipos y repuestos para los sectores minero, agroindustrial, pesquero, construcción y eléctrico.
                   </p>
                </div>
 
-               <div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
+               <div class="single-feature" data-wow-delay="0.4s">
                   <h3 class="nosotros__title">Nuestra Visión</h3>
                   <p class="nosotros__content">
                      Ser la empresa metalmecánica líder en la fabricación de productos y en el desarrollo de servicios que satisfagan las necesidades de la industria, innovando y desarrollando productos que cumplan con los más altos estándares de calidad y demanda del mercado.
                   </p>
                </div>
 
-               <div class="single-feature wow fadeInUp" data-wow-delay="0.5s">
+               <div class="single-feature" data-wow-delay="0.5s">
                   <h3 class="nosotros__title">Nuestra Misión</h3>
                   <p class="nosotros__content">
                      Ofrecer soluciones integrales que satisfagan las necesidades de nuestros clientes, superando sus expectativas, basándonos en nuestra experiencia y competitividad en el mercado de la metalmecánica y mecánica de producción.
@@ -160,7 +163,73 @@
             </div>
          </section>
 
-         <div style="margin-top: 100px;"></div>
+         <div class="section-separator"></div>
+
+         <section class="maquinaria section" id="maquinaria">
+            <h2 class="section__title">Maquinaria</h2>
+
+            <div class="maquinaria__container container swiper">
+               <div class="slide__content">
+                  <div class="swiper-wrapper maquinaria__flow">
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina1.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina2.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina3.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina4.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina5.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina6.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina7.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina8.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina9.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina10.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina11.jpg" alt="" class="maquinaria__img">
+                     </div>
+   
+                     <div class="maquinaria__content swiper-slide">
+                        <img src="./assets/img/maquinaria/maquina12.jpg" alt="" class="maquinaria__img">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-double-line swiper-maquinaria-icon"></i>
+               </div>
+               <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-double-line swiper-maquinaria-icon"></i>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
+         </section>
 
          <div class="gallery-container" id="gallery-container">
             <div class="image-wrapper" data-image="assets/logos-empresas/aje.png">
@@ -192,9 +261,12 @@
             </div>
         </div>
 
-        <div style="margin-top: 100px;"></div>
+        <div style="margin-top: 50px;"></div>
         
       </main>
+
+      <!--========================= SWIPER JS =========================-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
