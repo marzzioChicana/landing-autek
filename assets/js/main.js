@@ -163,10 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
 let swiperPortfolio = new Swiper(".slide__content", {
   loop: true,
   grabCursor: true,
-  slidesPerGroup: 2,
-  spaceBetween: 35,
-  centerSlide: 'true',
-  fade: 'true',
+  spaceBetween: 25,
+  centerSlide: true,
+  fade: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false
@@ -183,15 +182,51 @@ let swiperPortfolio = new Swiper(".slide__content", {
   breakpoints: {
     0: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
     },
-    640: {
+    750: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
+
     },
-    850: {
+    1118: {
       slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
-    },
+      slidesPerGroup: 2,
+    }
   }
 });
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the video element inside the modal
+var modalVideo = document.getElementById("modalVideo");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modal-footer")[0];
+
+// Function to open the modal and set the video source
+function openModal(videoSrc) {
+  modal.style.display = "flex";
+  modalVideo.src = "./assets/video/maquinaria_videos/" + videoSrc; // Ajusta esta ruta según la ubicación de tus videos
+  modalVideo.play();
+  console.log(videoSrc);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+  modalVideo.pause();
+  modalVideo.src = ""; // Limpia la fuente para detener el video
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    modalVideo.pause();
+    modalVideo.src = ""; // Limpia la fuente para detener el video
+  }
+}
