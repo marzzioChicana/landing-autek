@@ -167,7 +167,7 @@ let swiperPortfolio = new Swiper(".slide__content", {
   centerSlide: true,
   fade: true,
   autoplay: {
-    delay: 3000,
+    delay: 2000,
     disableOnInteraction: false
   },
   navigation: {

@@ -660,12 +660,6 @@ a {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .maquinaria__overlay{
-    opacity: 1;
-  }
-}
-
 .slide__content{
   overflow: hidden;
   padding: 2rem 0;
@@ -681,7 +675,7 @@ a {
 }
 
 .swiper-maquinaria-icon{
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: var(--first-color);
 }
 
@@ -713,6 +707,16 @@ a {
 .swiper-pagination-bullet-active {
   background-color: #ff6b6b;
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .maquinaria__overlay{
+    opacity: 1;
+  }
+
+  .swiper-maquinaria-icon{
+    display: none;
+  }
 }
 
 
