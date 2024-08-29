@@ -660,6 +660,12 @@ a {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .maquinaria__overlay{
+    opacity: 1;
+  }
+}
+
 .slide__content{
   overflow: hidden;
   padding: 2rem 0;

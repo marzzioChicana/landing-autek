@@ -212,7 +212,6 @@ function openModal(videoSrc) {
   modal.style.display = "flex";
   modalVideo.src = "./assets/video/maquinaria_videos/" + videoSrc; // Ajusta esta ruta según la ubicación de tus videos
   modalVideo.play();
-  console.log(videoSrc);
 }
 
 // When the user clicks on <span> (x), close the modal
