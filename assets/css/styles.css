@@ -396,6 +396,8 @@ a {
 .slider .list .item .content p:nth-child(1){
   text-transform: uppercase;
   letter-spacing: 10px;
+  font-size: 2rem; /* Se agrego para los textos largos*/
+
 }
 .slider .list .item .content h2{
   font-size: 100px;
