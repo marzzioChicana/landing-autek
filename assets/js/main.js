@@ -89,17 +89,26 @@ let lastScrollY = window.scrollY;
 const headerHeight = parseFloat(getComputedStyle(header).height);
 
 // Función para actualizar la visibilidad del header
+document.addEventListener('DOMContentLoaded', () => {
+    // Asegúrate de que el header esté visible al cargar la página
+    header.classList.add('visible');
+    updateHeaderVisibility(); // Para asegurar el estado correcto al cargar
+});
+
 function updateHeaderVisibility() {
     if (window.scrollY > headerHeight) {
         if (window.scrollY < lastScrollY) {
             // Scroll hacia arriba - mostrar header
+            header.classList.remove('hidden');
             header.classList.add('visible');
         } else {
             // Scroll hacia abajo - ocultar header
             header.classList.remove('visible');
+            header.classList.add('hidden');
         }
     } else {
         // Si estamos en la posición original, mostrar el header
+        header.classList.remove('hidden');
         header.classList.add('visible');
     }
 }
@@ -109,12 +118,6 @@ window.addEventListener('scroll', () => {
     updateHeaderVisibility();
     lastScrollY = window.scrollY;
 });
-
-// Asegúrate de que el header esté visible al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    updateHeaderVisibility();
-});
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
