@@ -213,7 +213,7 @@ var span = document.getElementsByClassName("modal-footer")[0];
 // Function to open the modal and set the video source
 function openModal(videoSrc) {
   modal.style.display = "flex";
-  modalVideo.src = "./assets/video/maquinaria_videos/" + videoSrc; // Ajusta esta ruta según la ubicación de tus videos
+  modalVideo.src = "./assets/video/maquinaria_videos/" + videoSrc;
   modalVideo.play();
 }
 
@@ -221,7 +221,7 @@ function openModal(videoSrc) {
 span.onclick = function() {
   modal.style.display = "none";
   modalVideo.pause();
-  modalVideo.src = ""; // Limpia la fuente para detener el video
+  modalVideo.src = "";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -229,6 +229,15 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     modalVideo.pause();
-    modalVideo.src = ""; // Limpia la fuente para detener el video
+    modalVideo.src = "";
   }
 }
+
+
+/* ==================== SHOW SCROLL UP ==================== */
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollUp);
