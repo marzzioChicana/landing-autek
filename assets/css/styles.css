@@ -20,7 +20,7 @@
   --body-font: "Oswald", sans-serif;
   --header-font-size: 1.25rem;
   --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
+  --h1-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: .938rem;
@@ -50,15 +50,51 @@
 }
 
 /*========== Responsive typography ==========*/
-@media screen and (min-width: 1250px) {
+@media screen and (max-width: 1700px) {
+  :root {
+    --big-font-size: 3.25rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .95rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
   :root {
     --big-font-size: 3rem;
-    --h1-font-size: 2.75rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: .9rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 2rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    --big-font-size: 2rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
   }
 }
 
@@ -396,12 +432,12 @@ a {
   text-transform: uppercase;
   letter-spacing: 10px;
   font-size: 2rem; /* Se agrego para los textos largos*/
-
 }
 .slider .list .item .content h2{
   font-size: 100px;
   margin: 0;
 }
+
 .slider .list .item.active{
   opacity: 1;
   z-index: 10;
@@ -496,6 +532,11 @@ a {
 
   .arrows{
     top: 10%;
+  }
+
+  .slider .list .item .content p:nth-child(1){
+    letter-spacing: 8px;
+    font-size: 1.5rem;
   }
 }
 
@@ -823,7 +864,7 @@ a {
 }
 
 .contacto__label{
-  font-size: var(--smaller-font-size);
+  font-size: var(--normal-font-size);
   color: var(--title-color);
 }
 
@@ -831,7 +872,7 @@ a {
   width: 100%;
   background-color: #f2f4f3ff;
   font-family: var(--body-color);
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   border: none;
   outline: none;
   padding: .25rem .5rem .5rem 0;
