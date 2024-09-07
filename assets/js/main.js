@@ -241,3 +241,23 @@ function scrollUp(){
     if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollUp);
+
+// SEND MAIL
+function sendMail() {
+    var params = {
+        from_name: document.getElementById("from_name").value,
+        from_email: "Autek S.A.C.",
+        email_id: document.getElementById("email_id").value,
+        project: document.getElementById("project").value,
+        message: document.getElementById("message").value
+    }
+    emailjs.send("service_zs7g5yz", "template_n850utv", params).then(function (res) {
+        if (res.status == 200) {
+            alert("Mensaje enviado correctamente");
+
+            document.getElementById("contact-form").reset();
+        } else {
+            alert("Ocurrió un error al enviar el mensaje");
+        }
+    })
+}

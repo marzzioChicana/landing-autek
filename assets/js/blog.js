@@ -62,6 +62,45 @@ window.addEventListener('scroll', () => {
     lastScrollY = window.scrollY;
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    async function loadPosts() {
+        try {
+            const response = await fetch('assets/json/blog.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const data = await response.json();
+            const postsContainer = document.getElementById('posts-container');
+
+            if (!postsContainer) {
+                throw new Error('Contenedor de posts no encontrado');
+            }
+
+            postsContainer.innerHTML = '';
+
+            data.posts.forEach((post, index) => {
+                const postHTML = `
+                    <div class="post-box ${post.type.toLowerCase()}">
+                        <img src="${post.photo}" alt="" class="post-img">
+                        <h2 class="category">${post.type}</h2>
+                        <a href="post-page.html?postIndex=${index}" class="post-title">${post.title}</a>
+                        <span class="post-date">${post.date}</span>
+                        <p class="post-description">${post.content}</p>
+                    </div>
+                `;
+
+                postsContainer.innerHTML += postHTML;
+            });
+
+        } catch (error) {
+            console.error('Error cargando los posts:', error);
+        }
+    }
+
+    loadPosts();
+});
+
+
 // Filter Js
 $(document).ready(function(){
     $('.filter-item').click(function(){
