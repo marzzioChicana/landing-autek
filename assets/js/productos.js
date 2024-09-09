@@ -27,8 +27,9 @@ const showMenu = (toggleId, navId) =>{
 showMenu('nav-toggle','nav-menu');
 
 const header = document.querySelector('.header');
+const home = document.querySelector('.home');
 let lastScrollY = window.scrollY;
-const headerHeight = parseFloat(getComputedStyle(header).height);
+const homeHeight = (parseFloat(getComputedStyle(home).height)) * 0.9;
 
 // Función para actualizar la visibilidad del header
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function updateHeaderVisibility() {
-    if (window.scrollY > headerHeight) {
+    if (window.scrollY > homeHeight) {
         if (window.scrollY < lastScrollY) {
             // Scroll hacia arriba - mostrar header
             header.classList.remove('hidden');
@@ -62,43 +63,58 @@ window.addEventListener('scroll', () => {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Cargar y mostrar el post seleccionado en post-page.html
-    if (window.location.pathname.endsWith('post-page.html')) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const index = urlParams.get('postIndex');
-        if (index !== null) {
-            fetch('assets/json/blog.json')
-                .then(response => response.json())
-                .then(data => {
-                    const post = data.posts[index];
-                    const postContent = document.getElementById('post-content');
-                    const postBody = document.getElementById('post-body');
-                    
-                    if (postContent) {
-                        postContent.innerHTML = `
-                            <div class="header-content post-container">
-                                <!--=============== BACK TO HOME ===============-->
-                                <a href="blog.html" class="back-home">Back To Home</a>
+    async function loadPosts() {
+        try {
+            const response = await fetch('assets/json/productos.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const data = await response.json();
+            const postsContainer = document.getElementById('posts-container');
 
-                                <!--=============== POST TITLE ===============-->
-                                <h1 class="header-title">${post.title}</h1>
+            if (!postsContainer) {
+                throw new Error('Contenedor de posts no encontrado');
+            }
 
-                                <!--=============== POST IMAGE ===============-->
-                                <img src="${post.photo}" alt="" class="header-img">
-                            </div>
-                        `;
-                    }
+            postsContainer.innerHTML = '';
 
-                    if (postBody) {
-                        postBody.innerHTML = `
-                            <h2 class="sub-heading">${post.subtitle}</h2>
-                            <p class="post-text">${post.content}</p>
-                        `;
-                    }
-                })
-                .catch(error => console.error('Error cargando el post:', error));
+            data.productos.forEach((producto, index) => {
+                const postHTML = `
+                    <div class="post-box ${producto.type.toLowerCase()}">
+                        <img src="${producto.photo}" alt="" class="post-img">
+                        <h2 class="category">${producto.type}</h2>
+                        <a href="producto.html?postIndex=${index}" class="post-title">${producto.title}</a>
+                        <p class="post-description">${producto.content}</p>
+                    </div>
+                `;
+
+                postsContainer.innerHTML += postHTML;
+            });
+
+        } catch (error) {
+            console.error('Error cargando los posts:', error);
         }
     }
+
+    loadPosts();
+});
+
+
+// Filter Js
+$(document).ready(function(){
+    $('.filter-item').click(function(){
+        const value = $(this).attr('data-filter');
+
+        if(value == 'todos') {
+            $('.post-box').show('1000')
+        }  else {
+            $('.post-box').not('.' + value).hide('1000')
+            $('.post-box').filter('.' + value).show('1000')
+        }
+    })
+});
+
+// Add active to btn
+$('.filter-item').click(function(){
+    $(this).addClass('active-filter').siblings().removeClass('active-filter');
 });

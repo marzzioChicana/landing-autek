@@ -1,0 +1,52 @@
+{
+    "productos":[
+        {
+            "title": "Tornillo compresor para prensa de harina de pescado",
+            "type": "Metalmecanica",
+            "photo": "assets/img/blog/post-1.jpeg",
+            "subtitle": "Create Best UX Design",
+            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "video": "https://www.youtube.com/embed/1"
+        },
+        {
+            "title": "Tornillo compresor para prensa de harina de pescado",
+            "type": "Hidraulica",
+            "photo": "assets/img/blog/post-2.jpeg",
+            "subtitle": "Create Best UX Design",
+            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "video": "https://www.youtube.com/embed/2"
+        },
+        {
+            "title": "Tornillo compresor para prensa de harina de pescado",
+            "type": "Metalmecanica",
+            "photo": "assets/img/blog/post-3.jpeg",
+            "subtitle": "Create Best UX Design",
+            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "video": "https://www.youtube.com/embed/3"
+        },
+        {
+            "title": "Tornillo compresor para prensa de harina de pescado",
+            "type": "Hidraulica",
+            "photo": "assets/img/blog/post-4.jpeg",
+            "subtitle": "Create Best UX Design",
+            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "video": "https://www.youtube.com/embed/4"
+        },
+        {
+            "title": "Tornillo compresor para prensa de harina de pescado",
+            "type": "Hidraulica",
+            "photo": "assets/img/blog/post-5.jpeg",
+            "subtitle": "Create Best UX Design",
+            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "video": "https://www.youtube.com/embed/5"
+        },
+        {
+            "title": "Tornillo compresor para prensa de harina de pescado",
+            "type": "Metalmecanica",
+            "photo": "assets/img/blog/post-6.jpeg",
+            "subtitle": "Create Best UX Design",
+            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "video": "https://www.youtube.com/embed/6"
+        }
+    ]
+}
