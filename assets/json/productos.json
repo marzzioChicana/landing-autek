@@ -5,7 +5,7 @@
             "type": "Metalmecanica",
             "photo": "assets/img/blog/post-1.jpeg",
             "subtitle": "Create Best UX Design",
-            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "content": "Mecanizado del diametro exterior en torno cnc de 6mts. despues de recuperarlo con soldadura inox.",
             "gallery": [
                 "assets/img/blog/post-1.jpeg",
                 "assets/img/blog/post-2.jpeg",
@@ -16,22 +16,22 @@
             ]
         },
         {
-            "title": "Tornillo compresor para prensa de harina de pescado",
+            "title": "Mantenimiento y fabricacion de maquinas Raise Borer",
             "type": "Hidraulica",
             "photo": "assets/img/blog/post-2.jpeg",
             "subtitle": "Create Best UX Design",
-            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "content": "Reparacion integral de componentes para maquinas de perforacion. // Mecanizado de pin y box en barras de perforacion.",
             "video": "https://www.youtube.com/embed/2",
             "gallery": [
                 "assets/img/blog/post-1.jpeg"
             ]
         },
         {
-            "title": "Tornillo compresor para prensa de harina de pescado",
+            "title": "Fabricacion integral de bases para bombas",
             "type": "Metalmecanica",
             "photo": "assets/img/blog/post-3.jpeg",
             "subtitle": "Create Best UX Design",
-            "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
+            "content": "Fabricacion de bases para bombas warman para diferentes modelos.",
             "video": "https://www.youtube.com/embed/3",
             "gallery": [
                 "assets/img/blog/post-1.jpeg",
@@ -39,7 +39,7 @@
             ]
         },
         {
-            "title": "Tornillo compresor para prensa de harina de pescado",
+            "title": "Fabricacion de ciclones",
             "type": "Hidraulica",
             "photo": "assets/img/blog/post-4.jpeg",
             "subtitle": "Create Best UX Design",
@@ -52,7 +52,7 @@
             ]
         },
         {
-            "title": "Tornillo compresor para prensa de harina de pescado",
+            "title": "Fabricacion de moldes para mangueras de caucho",
             "type": "Hidraulica",
             "photo": "assets/img/blog/post-5.jpeg",
             "subtitle": "Create Best UX Design",
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "title": "Tornillo compresor para prensa de harina de pescado",
+            "title": "Fabricacion de Spool",
             "type": "Metalmecanica",
             "photo": "assets/img/blog/post-6.jpeg",
             "subtitle": "Create Best UX Design",
