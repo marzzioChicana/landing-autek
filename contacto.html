@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--========================= SWIPER CSS =========================-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/contacto.css">
+
+      <title>AUTEK S.A.C.</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <div class="nav__logo">
+                  <img src="assets/img/header/logo-autek.png" alt="" class="nav__logo-img">
+               </div>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="index.html" class="nav__link">Inicio</a></li>
+
+                  <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+
+                  <li><a href="#maquinaria" class="nav__link">Maquinaria</a></li>
+
+                  <li><a href="productos.html" class="nav__link">Productos</a></li>
+
+                  <li><a href="blog.html" class="nav__link">Blog</a></li>
+
+                  <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+
+      <main>
+        <section class="contacto section" id="contacto">
+            <h2 class="section__title">CONTACTO</h2>
+
+            <div class="contacto__container container grid">
+               <div>
+                  <div class="contacto__information">
+                     <i class="ri-phone-line contacto__icon"></i>
+
+                     <div>
+                        <h3 class="contacto__title">Call me</h3>
+                        <span class="contacto__subtitle">999-777-666</span>
+                     </div>
+                  </div>
+
+                  <div class="contacto__information">
+                     <i class="ri-mail-line contacto__icon"></i>
+
+                     <div>
+                        <h3 class="contacto__title">Email</h3>
+                        <span class="contacto__subtitle">abcdef@auteksac.com</span>
+                     </div>
+                  </div>
+
+                  <div class="contacto__information">
+                     <i class="ri-map-pin-line contacto__icon"></i>
+
+                     <div>
+                        <h3 class="contacto__title">Location</h3>
+                        <span class="contacto__subtitle">Perú - Lima, Av. Alfredo Mendiola Mz. E6 Lt 11, S.M.P.</span>
+                     </div>
+                  </div>
+               </div>
+
+               <form action="" class="contacto__form grid" id="contact-form">
+                  <div class="contacto__inputs grid">
+                     <div class="contacto__content">
+                        <label for="" class="contacto__label">Name</label>
+                        <input id="from_name" type="text" class="contacto__input">
+                     </div>
+
+                     <div class="contacto__content">
+                        <label for="" class="contacto__label">Email</label>
+                        <input id="email_id" type="email" class="contacto__input">
+                     </div>
+                  </div>
+
+                  <div class="contacto__content">
+                     <label for="" class="contacto__label">Project</label>
+                     <input id="project" type="text" class="contacto__input">
+                  </div>
+
+                  <div class="contacto__content">
+                     <label for="" class="contacto__label">Message</label>
+                     <textarea id="message" name="" id="" cols="0" rows="7" class="contacto__input"></textarea>
+                  </div>
+
+                  <div>
+                     <a href="#" class="button button--flex" onclick="sendMail()">
+                        Send Message
+                        <i class="ri-mail-send-line button__icon"></i>
+                     </a>
+                  </div>
+               </form>
+            </div>
+
+            <div class="map__container container">
+               <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3903.613766364106!2d-77.070951!3d-11.931944999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDU1JzU1LjAiUyA3N8KwMDQnMTUuNCJX!5e0!3m2!1ses-419!2spe!4v1724963163101!5m2!1ses-419!2spe" 
+                  width="100%" 
+                  height="450" 
+                  style="border:0; border-radius: .5rem;" 
+                  allowfullscreen="true" 
+                  loading="lazy"
+               ></iframe>
+
+               <div class="map__overlay">
+                  <h3>Ubicación de Nuestra Local</h3>
+                  <p>Estamos ubicados en Av. Alfredo Mendiola Mz. E6 Lt 11, S.M.P., Lima, Perú.</p>
+                </div>
+            </div>
+        </section>
+      </main>
+
+      <!--=============== FOOTER ===============-->
+      <footer class="footer">
+         <div class="footer__bg">
+            <div class="footer__container container grid">
+               <div>
+                  <h1 class="footer__title">Autek S.A.C.</h1>
+                  <span class="footer__subtitle">Ingenieria y Servicios</span>
+               </div>
+
+               <ul class="footer__links">
+                  <li>
+                     <a href="index.html" class="footer__link">Inicio</a>
+                  </li>
+
+                  <li>
+                     <a href="#nosotros" class="footer__link">Nosotros</a>
+                  </li>
+
+                  <li>
+                     <a href="#maquinaria" class="footer__link">Maquinaria</a>
+                  </li>
+
+                  <li>
+                     <a href="productos.html" class="footer__link">Productos</a>
+                  </li>
+
+                  <li>
+                     <a href="blog.html" class="footer__link">Blog</a>
+                  </li>
+
+                  <li>
+                     <a href="contacto.html" class="footer__link">Contacto</a>
+                  </li>
+               </ul>
+
+               <div class="footer__socials">
+                  <a href="https://www.facebook.com/AUTEK-SAC-Ingenier%C3%ADa-y-Servicios-100054432702010/" target="_blank" class="footer__social">
+                     <i class="ri-facebook-fill"></i>
+                  </a>
+
+                  <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/autek-ingenier%C3%ADa-y-servicios-s-a-c-a393b81a7" target="_blank" class="footer__social">
+                     <i class="ri-linkedin-fill"></i>
+                  </a>
+               </div>
+            </div>
+
+            <p class="footer__copy">&#169; Desarrollado por Autek S.A.C.</p>
+         </div>
+      </footer>
+
+      <!--========================= SWIPER JS =========================-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/contacto.js"></script>
+
+      <!--=============== EMAIL JS ===============-->
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+
+      <script type="text/javascript">
+         (function(){
+            emailjs.init({
+            publicKey: "dzLcLiD-SiV0BKojp",
+            });
+         })();
+      </script>
+   </body>
+</html>

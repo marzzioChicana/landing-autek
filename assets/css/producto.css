@@ -758,3 +758,34 @@ section{
 .producto-slider-control .swiper-pagination .swiper-pagination-bullet-active{
     background: var(--title-color);
 }
+
+
+
+/* Personalización de SweetAlert2 para que coincida con tu diseño */
+.swal2-popup {
+  font-family: 'Oswald', sans-serif;
+}
+
+.swal2-title {
+  color: var(--black-color);
+  font-size: 1.5rem;
+}
+
+.swal2-html-container {
+  color: var(--text-color);
+}
+
+.swal2-confirm {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  border: none;
+}
+
+.swal2-confirm:hover {
+  background-color: var(--black-color-light);
+}
+
+.swal2-container {
+  z-index: var(--z-fixed);
+}

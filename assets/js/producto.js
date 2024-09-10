@@ -169,7 +169,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('twitter-share').href = shareUrls.twitter + currentUrl;
     document.getElementById('linkedin-share').href = shareUrls.linkedin + currentUrl;
 
-    // Instagram no permite compartir URLs directamente desde el navegador
-    // Si deseas, puedes agregar un enlace a la página de Instagram o una indicación de que se comparta manualmente
-    document.getElementById('instagram-share').href = 'https://www.instagram.com/';
+    document.getElementById('instagram-share').href = 'https://www.instagram.com/yourusername/';
+    document.getElementById('instagram-share').addEventListener('click', (event) => {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Comparte en Instagram',
+            text: 'Copia el enlace y pégalo en un mensaje directo usando la aplicación de Instagram.',
+            icon: 'info',
+            confirmButtonText: 'OK',
+            confirmButtonColor: "#232323ff",
+            customClass: {
+                title: 'swal2-title',
+                htmlContainer: 'swal2-html-container',
+                confirmButton: 'swal2-confirm'
+            }
+        });
+    });
 });
