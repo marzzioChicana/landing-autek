@@ -27,72 +27,6 @@ const showMenu = (toggleId, navId) =>{
 showMenu('nav-toggle','nav-menu');
 
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Cargar y mostrar el post seleccionado en post-page.html
-    if (window.location.pathname.endsWith('producto.html')) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const index = urlParams.get('postIndex');
-        if (index !== null) {
-            fetch('assets/json/productos.json')
-                .then(response => response.json())
-                .then(data => {
-                    const producto = data.productos[index];
-                    const productoContent = document.getElementById('post-content');
-                    const productoBody = document.getElementById('post-body');
-                    
-                    if (productoContent) {
-                        productoContent.innerHTML = `
-                            <div class="header-content post-container">
-                                <!--=============== BACK TO HOME ===============-->
-                                <a href="blog.html" class="back-home">Back To Home</a>
-
-                                <!--=============== POST TITLE ===============-->
-                                <h1 class="header-title">${producto.title}</h1>
-
-                                <!--=============== POST IMAGE ===============-->
-                                <img src="${producto.photo}" alt="" class="header-img">
-                            </div>
-                        `;
-                    }
-
-                    if (productoBody) {
-                        productoBody.innerHTML = `
-                            <h2 class="sub-heading">${producto.subtitle}</h2>
-                            <p class="post-text">${producto.content}</p>
-                        `;
-                    }
-                })
-                .catch(error => console.error('Error cargando el post:', error));
-        }
-    }
-});
-
-
-var productoSlider = new Swiper('.producto-slider', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2.5
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    }
-});
-
-
-
 const header = document.querySelector('.header');
 let lastScrollY = window.scrollY;
 const headerHeight = parseFloat(getComputedStyle(header).height);
@@ -126,4 +60,116 @@ function updateHeaderVisibility() {
 window.addEventListener('scroll', () => {
     updateHeaderVisibility();
     lastScrollY = window.scrollY;
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Cargar y mostrar el post seleccionado en post-page.html
+    if (window.location.pathname.endsWith('producto.html')) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const index = urlParams.get('postIndex');
+        if (index !== null) {
+            fetch('assets/json/productos.json')
+                .then(response => response.json())
+                .then(data => {
+                    const producto = data.productos[index];
+                    const productoContent = document.getElementById('post-content');
+                    const productoBody = document.getElementById('post-body');
+                    const productoGallery = document.getElementById('producto-gallery');
+                    const productoSection = document.getElementById('producto');
+                    
+                    if (productoContent) {
+                        productoContent.innerHTML = `
+                            <div class="header-content post-container">
+                                <!--=============== BACK TO HOME ===============-->
+                                <a href="productos.html" class="back-home">Back To Home</a>
+
+                                <!--=============== POST TITLE ===============-->
+                                <h1 class="header-title">${producto.title}</h1>
+
+                                <!--=============== POST IMAGE ===============-->
+                                <img src="${producto.photo}" alt="" class="header-img">
+                            </div>
+                        `;
+                    }
+
+                    if (productoBody) {
+                        productoBody.innerHTML = `
+                            <h2 class="sub-heading">${producto.subtitle}</h2>
+                            <p class="post-text">${producto.content}</p>
+                        `;
+                    }
+
+                    if (productoGallery && Array.isArray(producto.gallery) && producto.gallery.length > 0) {
+                        producto.gallery.forEach(image => {
+                            const slide = document.createElement('div');
+                            slide.classList.add('swiper-slide', 'producto-slide');
+                            slide.innerHTML = `
+                                <div class="producto-slide-img">
+                                    <img src="${image}" alt="">
+                                </div>
+                            `;
+                            productoGallery.appendChild(slide);
+                        });
+                        // Mostrar la sección solo si hay contenido
+                        if (productoSection) {
+                            productoSection.style.display = 'block';
+
+                            new Swiper('.producto-slider', {
+                                effect: 'coverflow',
+                                grabCursor: true,
+                                centeredSlides: true,
+                                loop: true,
+                                slidesPerView: 'auto',
+                                coverflowEffect: {
+                                    rotate: 0,
+                                    stretch: 0,
+                                    depth: 100,
+                                    modifier: 2.5
+                                },
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                },
+                                navigation: {
+                                    nextEl: '.swiper-button-next',
+                                    prevEl: '.swiper-button-prev'
+                                }
+                            });
+                        }
+                    } else {
+                        // Ocultar la sección si no hay imágenes
+                        if (productoSection) {
+                            productoSection.style.display = 'none';
+                        }
+                    }
+                })
+                .catch(error => console.error('Error cargando el post:', error));
+        }
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Define URLs base para compartir
+    const shareUrls = {
+        facebook: 'https://www.facebook.com/sharer/sharer.php?u=',
+        twitter: 'https://twitter.com/intent/tweet?url=',
+        linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url=',
+        instagram: 'https://www.instagram.com/' // Instagram no soporta compartir enlaces directamente desde el navegador
+    };
+
+    // Obtén la URL actual
+    const currentUrl = encodeURIComponent(window.location.href); // Codifica la URL para que sea válida en un enlace
+
+    // Configura los enlaces de compartir
+    document.getElementById('facebook-share').href = shareUrls.facebook + currentUrl;
+    document.getElementById('twitter-share').href = shareUrls.twitter + currentUrl;
+    document.getElementById('linkedin-share').href = shareUrls.linkedin + currentUrl;
+
+    // Instagram no permite compartir URLs directamente desde el navegador
+    // Si deseas, puedes agregar un enlace a la página de Instagram o una indicación de que se comparta manualmente
+    document.getElementById('instagram-share').href = 'https://www.instagram.com/';
 });

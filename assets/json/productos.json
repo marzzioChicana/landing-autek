@@ -6,7 +6,14 @@
             "photo": "assets/img/blog/post-1.jpeg",
             "subtitle": "Create Best UX Design",
             "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
-            "video": "https://www.youtube.com/embed/1"
+            "gallery": [
+                "assets/img/blog/post-1.jpeg",
+                "assets/img/blog/post-2.jpeg",
+                "assets/img/blog/post-3.jpeg",
+                "assets/img/blog/post-4.jpeg",
+                "assets/img/blog/post-5.jpeg",
+                "assets/img/blog/post-6.jpeg"
+            ]
         },
         {
             "title": "Tornillo compresor para prensa de harina de pescado",
@@ -14,7 +21,10 @@
             "photo": "assets/img/blog/post-2.jpeg",
             "subtitle": "Create Best UX Design",
             "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
-            "video": "https://www.youtube.com/embed/2"
+            "video": "https://www.youtube.com/embed/2",
+            "gallery": [
+                "assets/img/blog/post-1.jpeg"
+            ]
         },
         {
             "title": "Tornillo compresor para prensa de harina de pescado",
@@ -22,7 +32,11 @@
             "photo": "assets/img/blog/post-3.jpeg",
             "subtitle": "Create Best UX Design",
             "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
-            "video": "https://www.youtube.com/embed/3"
+            "video": "https://www.youtube.com/embed/3",
+            "gallery": [
+                "assets/img/blog/post-1.jpeg",
+                "assets/img/blog/post-2.jpeg"
+            ]
         },
         {
             "title": "Tornillo compresor para prensa de harina de pescado",
@@ -30,7 +44,12 @@
             "photo": "assets/img/blog/post-4.jpeg",
             "subtitle": "Create Best UX Design",
             "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
-            "video": "https://www.youtube.com/embed/4"
+            "video": "https://www.youtube.com/embed/4",
+            "gallery": [
+                "assets/img/blog/post-1.jpeg",
+                "assets/img/blog/post-2.jpeg",
+                "assets/img/blog/post-3.jpeg"
+            ]
         },
         {
             "title": "Tornillo compresor para prensa de harina de pescado",
@@ -38,7 +57,21 @@
             "photo": "assets/img/blog/post-5.jpeg",
             "subtitle": "Create Best UX Design",
             "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
-            "video": "https://www.youtube.com/embed/5"
+            "video": "https://www.youtube.com/embed/5",
+            "gallery": [
+                "assets/img/blog/post-1.jpeg",
+                "assets/img/blog/post-2.jpeg",
+                "assets/img/blog/post-3.jpeg",
+                "assets/img/blog/post-4.jpeg",
+                "assets/img/blog/post-5.jpeg",
+                "assets/img/blog/post-6.jpeg",
+                "assets/img/blog/post-4.jpeg",
+                "assets/img/blog/post-5.jpeg",
+                "assets/img/blog/post-6.jpeg",
+                "assets/img/blog/post-4.jpeg",
+                "assets/img/blog/post-5.jpeg",
+                "assets/img/blog/post-6.jpeg"
+            ]
         },
         {
             "title": "Tornillo compresor para prensa de harina de pescado",
@@ -46,7 +79,15 @@
             "photo": "assets/img/blog/post-6.jpeg",
             "subtitle": "Create Best UX Design",
             "content": "Mecanizado del diametro exterior de tornillo compresor en torno cnc de 6mts.",
-            "video": "https://www.youtube.com/embed/6"
+            "video": "https://www.youtube.com/embed/6",
+            "gallery": [
+                "assets/img/blog/post-1.jpeg",
+                "assets/img/blog/post-2.jpeg",
+                "assets/img/blog/post-3.jpeg",
+                "assets/img/blog/post-4.jpeg",
+                "assets/img/blog/post-5.jpeg",
+                "assets/img/blog/post-6.jpeg"
+            ]
         }
     ]
 }
